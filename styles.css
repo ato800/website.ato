@@ -1,0 +1,128 @@
+body {
+    background: url('https://img12.pixhost.to/images/788/574302225_skyzopedia.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden; /* Mencegah scroll horizontal */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 80vh;
+    padding: 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Lebih transparan agar lebih smooth */
+    backdrop-filter: blur(20px); /* Blur lebih kuat */
+     -webkit-backdrop-filter: blur(20px); /* Kompatibilitas Safari */
+    border-radius: 20px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.profile h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile .verified {
+    color: #3b82f6;
+    font-size: 15px;
+}
+
+.bio {
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: #f1f1f1;
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+.location {
+    color: #555;
+    font-size: 14px;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.toggle-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5; /* Lebih transparan */
+    filter: blur(1px); /* Efek blur agar tidak terlalu tajam */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
